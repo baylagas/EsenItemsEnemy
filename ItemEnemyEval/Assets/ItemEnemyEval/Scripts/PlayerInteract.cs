@@ -8,10 +8,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Potion"))
+        if(collision.gameObject.CompareTag("GoombaMov"))
         {
-            healthScript.AddHealth(2);
-            Destroy(collision.gameObject);
+            healthScript.RemoveHealth(1);
         }
     }
 }

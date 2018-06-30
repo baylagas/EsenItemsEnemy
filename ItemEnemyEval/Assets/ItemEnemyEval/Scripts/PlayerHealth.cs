@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,5 +18,20 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+
+    public void RemoveHealth(int value)
+    {
+        currentHealth -= value;
+        if (currentHealth <= 0)
+        {
+            //currentHealth = 0;
+            RestartLevel();
+        }
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

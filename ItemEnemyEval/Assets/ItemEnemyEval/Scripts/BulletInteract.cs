@@ -4,9 +4,8 @@ public class BulletInteract : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("GoombaMov"))
         {
-            Debug.Log("i am bullet and i hit the enemy");
             Destroy(gameObject);
         }
     }

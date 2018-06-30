@@ -13,8 +13,6 @@ public class EnemyInteract : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("i am enemy and i got hit by bullet");
-            //bajar vida
             health.RemoveHealth();
         }
     }

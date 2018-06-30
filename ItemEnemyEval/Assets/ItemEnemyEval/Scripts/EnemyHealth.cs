@@ -15,7 +15,10 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = currentHealth - 1;
         if(currentHealth==0)
         {
-            Destroy(gameObject);
+            if(transform.gameObject.CompareTag("GoombaMov"))
+            {
+                Destroy(gameObject.transform.parent.gameObject);
+            }
         }
     }
 }

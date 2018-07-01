@@ -31,23 +31,23 @@ public class EnemyBulletMovement : MonoBehaviour
     {
         if (direction == 0)
         {
-            move = Vector3.up;
-            spriteRenderer.sprite = spriteArray[1];
+            move = Vector3.down;
+            spriteRenderer.sprite = spriteArray[0];
         }
         else if (direction == 1)
         {
-            move = Vector3.right;
-            spriteRenderer.sprite = spriteArray[0];
+            move = Vector3.left;
+            spriteRenderer.sprite = spriteArray[1];
         }
         else if (direction == 2)
         {
-            move = Vector3.down;
-            spriteRenderer.sprite = spriteArray[1];
+            move = Vector3.right;
+            spriteRenderer.sprite = spriteArray[2];
         }
         else if (direction == 3)
         {
-            move = Vector3.left;
-            spriteRenderer.sprite = spriteArray[0];
+            move = Vector3.up;
+            spriteRenderer.sprite = spriteArray[3];
         }
     }
 
@@ -58,6 +58,7 @@ public class EnemyBulletMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        /*
         if (other.gameObject.CompareTag("Wall"))
         {
             //Debug.Log("Collided with wall!!");
@@ -82,6 +83,7 @@ public class EnemyBulletMovement : MonoBehaviour
             DestroyAnimation();
             Destroy(transform.gameObject);
         }
+        */
     }
 
     private void DestroyAnimation()

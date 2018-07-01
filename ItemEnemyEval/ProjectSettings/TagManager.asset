@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - GoombaMov
+  - GBullet
+  - GoombaShoot
   layers:
   - Default
   - TransparentFX

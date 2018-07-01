@@ -12,5 +12,9 @@ public class PlayerInteract : MonoBehaviour
         {
             healthScript.RemoveHealth(1);
         }
+        if (collision.gameObject.CompareTag("GBullet"))
+        {
+            healthScript.RemoveHealth(2);
+        }
     }
 }

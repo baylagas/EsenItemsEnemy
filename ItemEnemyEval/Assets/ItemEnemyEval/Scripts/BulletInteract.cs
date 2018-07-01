@@ -8,5 +8,16 @@ public class BulletInteract : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("GoombaShoot"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Chest"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

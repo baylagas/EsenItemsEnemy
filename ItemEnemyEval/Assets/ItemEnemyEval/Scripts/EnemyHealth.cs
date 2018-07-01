@@ -19,6 +19,11 @@ public class EnemyHealth : MonoBehaviour
             {
                 Destroy(gameObject.transform.parent.gameObject);
             }
+            if (transform.gameObject.CompareTag("GoombaShoot") ||
+                transform.gameObject.CompareTag("Chest"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

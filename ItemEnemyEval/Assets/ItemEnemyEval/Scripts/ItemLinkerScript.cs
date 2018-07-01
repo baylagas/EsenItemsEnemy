@@ -7,6 +7,7 @@ public class ItemLinkerScript : MonoBehaviour
 {
     public ItemLinker linker;
     private SpriteRenderer spRender;
+    public bool GotLinkedItem;
 
     private void Awake()
     {
@@ -17,11 +18,11 @@ public class ItemLinkerScript : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            PlayerInteractComplex playerScript = 
-                collision.gameObject.GetComponent<PlayerInteractComplex>();
+            PlayerInteract playerScript = 
+                collision.gameObject.GetComponent<PlayerInteract>();
             List<ItemLinked> linkedArray = linker.linkedArray;
 
-            List<LinkProperty> playerPropArray = playerScript.propertyArray;
+            List<LinkProperty> playerPropArray = playerScript.propertyList;
 
             foreach (var item in linkedArray)
             {
@@ -31,6 +32,7 @@ public class ItemLinkerScript : MonoBehaviour
                     Debug.Log(item.property.isObtained);
                     Debug.Log("player has item");
                     ChangeToSprite();
+                    GotLinkedItem = true;
                 }
                 else
                 {

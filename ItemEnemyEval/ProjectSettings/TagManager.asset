@@ -8,6 +8,9 @@ TagManager:
   - GoombaMov
   - GBullet
   - GoombaShoot
+  - Chest
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX
